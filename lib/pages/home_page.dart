@@ -156,14 +156,15 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                             width: 80,
                             height: 80,
                             decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                // color: Colors.blue.withOpacity(.2),
-                                image: DecorationImage(
-                                  image: AssetImage(
-                                    'assets/images/${images.keys.elementAt(index)}',
-                                  ),
-                                  fit: BoxFit.cover,
-                                )),
+                              borderRadius: BorderRadius.circular(20),
+                              // color: Colors.blue.withOpacity(.2),
+                              image: DecorationImage(
+                                image: AssetImage(
+                                  'assets/images/${images.keys.elementAt(index)}',
+                                ),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
                           ),
                           const SizedBox(
                             height: 8,

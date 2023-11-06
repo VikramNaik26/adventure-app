@@ -1,4 +1,4 @@
-import 'package:adventure_app/navpages/main_page.dart';
+import 'package:adventure_app/pages/navpages/main_page.dart';
 import 'package:adventure_app/pages/welcome_page.dart';
 import 'package:flutter/material.dart';
 

@@ -1,7 +1,7 @@
-import 'package:adventure_app/navpages/bar-item_page.dart';
-import 'package:adventure_app/navpages/home_page.dart';
-import 'package:adventure_app/navpages/my_page.dart';
-import 'package:adventure_app/navpages/search_page.dart';
+import 'package:adventure_app/pages/navpages/bar-item_page.dart';
+import 'package:adventure_app/pages/home_page.dart';
+import 'package:adventure_app/pages/navpages/my_page.dart';
+import 'package:adventure_app/pages/navpages/search_page.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatefulWidget {
