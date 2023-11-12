@@ -77,7 +77,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   Tab(
                     text: 'Places',
                   ),
-                  Tab(text: 'Inspiration'),
+                  Tab(
+                    text: 'Inspiration',
+                  ),
                   Tab(
                     text: 'Emotions',
                   ),

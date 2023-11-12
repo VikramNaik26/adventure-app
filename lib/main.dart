@@ -1,3 +1,5 @@
+import 'package:adventure_app/pages/details_page.dart';
+import 'package:adventure_app/pages/home_page.dart';
 import 'package:adventure_app/pages/navpages/main_page.dart';
 import 'package:adventure_app/pages/welcome_page.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MainPage(),
+      home: const DetailsPages(),
     );
   }
 }
