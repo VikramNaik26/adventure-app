@@ -2,20 +2,24 @@ import 'package:adventure_app/widgets/app_text.dart';
 import 'package:flutter/material.dart';
 
 class AppButton extends StatelessWidget {
-  const AppButton({
+  AppButton({
     super.key,
-    this.index,
     this.color,
     this.size = 60,
     this.borderColor,
     required this.backgroundColor,
+    this.text,
+    this.icon,
+    this.isIcon = false,
   });
 
   final Color? color;
   final double? size;
-  final int? index;
   final Color? borderColor;
   final Color backgroundColor;
+  final String? text;
+  IconData? icon;
+  bool? isIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -31,11 +35,16 @@ class AppButton extends StatelessWidget {
           color: borderColor ?? Colors.transparent,
         ),
       ),
-      child: Center(
-        child: AppText(
-          text: (index! + 1).toString(),
-        ),
-      ),
+      child: isIcon == false
+          ? Center(
+              child: AppText(
+                text: text!,
+                color: color ?? Colors.white,
+              ),
+            )
+          : Center(
+              child: Icon(icon, color: color),
+            ),
     );
   }
 }
