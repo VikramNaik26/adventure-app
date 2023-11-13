@@ -1,7 +1,9 @@
+import 'package:adventure_app/cubit/app_cubit.dart';
 import 'package:adventure_app/widgets/app_large_text.dart';
 import 'package:adventure_app/widgets/app_text.dart';
 import 'package:adventure_app/widgets/responsive_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
@@ -42,20 +44,20 @@ class _WelcomePageState extends State<WelcomePage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Column(
+                  Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      AppLargeText(
+                      const AppLargeText(
                         text: 'Trips',
                       ),
-                      AppText(
+                      const AppText(
                         text: 'Mountain',
                         size: 30,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 250,
                         child: AppText(
                           text:
@@ -64,10 +66,22 @@ class _WelcomePageState extends State<WelcomePage> {
                           size: 14,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 40,
                       ),
-                      ResponsiveButton()
+                      GestureDetector(
+                        onTap: () {
+                          BlocProvider.of<AppCubit>(context).getData();
+                        },
+                        child: const SizedBox(
+                          width: 120,
+                          child: Row(
+                            children: [
+                              ResponsiveButton(),
+                            ],
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                   Column(

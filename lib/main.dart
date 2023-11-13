@@ -1,8 +1,8 @@
-import 'package:adventure_app/pages/details_page.dart';
-import 'package:adventure_app/pages/home_page.dart';
-import 'package:adventure_app/pages/navpages/main_page.dart';
-import 'package:adventure_app/pages/welcome_page.dart';
+import 'package:adventure_app/cubit/app_cubit.dart';
+import 'package:adventure_app/cubit/app_cubit_logic.dart';
+import 'package:adventure_app/services/data_services.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +20,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const DetailsPages(),
+      home: BlocProvider<AppCubit>(
+        create: (context) => AppCubit(
+          data: DataServices(),
+        ),
+        child: const AppCubitLogic(),
+      ),
     );
   }
 }
