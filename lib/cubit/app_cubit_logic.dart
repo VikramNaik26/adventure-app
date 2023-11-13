@@ -1,5 +1,6 @@
 import 'package:adventure_app/cubit/app_cubit.dart';
 import 'package:adventure_app/cubit/app_cubit_states.dart';
+import 'package:adventure_app/pages/details_page.dart';
 import 'package:adventure_app/pages/home_page.dart';
 import 'package:adventure_app/pages/welcome_page.dart';
 import 'package:flutter/material.dart';
@@ -26,6 +27,9 @@ class _AppCubitLogicState extends State<AppCubitLogic> {
           }
           if (state is LoadedState) {
             return const HomePage();
+          }
+          if (state is DetailState) {
+            return const DetailsPages();
           }
 
           return Container();
